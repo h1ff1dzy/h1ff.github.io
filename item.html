@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Immortal Orochi - Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap">
+  <script src="https://kit.fontawesome.com/6eb2b30fbf.js" crossorigin="anonymous"></script>
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <style>
+    @media screen and (max-width: 767px) {
+      .corner-bottom-left, .corner-bottom-right, .corner-top-left, .corner-top-right, .menu, .logo{
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="background-container">
+  <div class="mobile-menu-btn">
+    <a href="#"><i class="fa-solid fa-arrow-left"></i> ВЕРНУТЬСЯ К КАТАЛОГУ</a>
+  </div>
+    <div class="header">
+    <div class="corner-top-left"></div>
+    <div class="corner-top-right"></div>
+    <div class="corner-bottom-left"></div>
+    <div class="corner-bottom-right"></div>
+    <img class="svg-background" src="/img/svg/bg.svg" alt="Background">
+    <img class="logo" src="/img/logo.png" alt="Logo">
+    <!-- Меню -->
+    <div class="menu">
+    <a href="#" class="menu-burger" id="openSearch" ><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a href="#" class="menu-item active">Главная</a>
+    <a href="#" class="menu-item">Каталог</a>
+    <a href="#" class="menu-item">Новинки</a>
+    <a href="#" class="menu-item">О нас</a>
+  </div>
+  </div>
+  <div class="item">
+    <div class="item-container">
+      <div class="item-container-img">
+        <div class="item-container-img--main">
+          <img src="https://via.placeholder.com/312x312" alt="Главное фото">
+        </div>
+        <div class="item-container-img-list">
+          <img src="https://via.placeholder.com/312x312" class="item-img selected" alt="Доп фото">
+          <img src="https://via.placeholder.com/312x312" class="item-img" alt="Доп фото">
+          <img src="https://via.placeholder.com/312x312" class="item-img" alt="Доп фото">
+          <img src="https://via.placeholder.com/312x312" class="item-img" alt="Доп фото">
+        </div>
+      </div>
+      <div class="item-container-title">
+        <span class="item-container-category">Лонгслив</span> <span class="item-container-name">Nevermore</span>
+        <div class="item-container-title--price">
+          2 890₽
+        </div>
+      </div>
+      <div class="item-container-size_select">
+        <div class="item-container-size_select-title">
+          Размер
+        </div>
+        <div class="custom-dropdown" id="sizeDropdown">
+          <div class="selected-size" onclick="toggleDropdown()">
+            <span id="selectedSizeText">Выберите размер</span>
+            <i id="toggleIcon" class="fas fa-chevron-down"></i>
+          </div>
+          <div class="dropdown-content">
+            <div onclick="selectSize('S')">S <span class="text-mute-ra">165-175 см</span></div>
+            <div onclick="selectSize('M')">M <span class="text-mute-ra">170-180 см</span></div>
+            <div onclick="selectSize('L')">L <span class="text-mute-ra">175-185 см</span></div>
+            <div onclick="selectSize('XL')">XL <span class="text-mute-ra">175-185 см</span></div>
+            <div onclick="selectSize('XXL')">XXL <span class="text-mute-ra">175-185 см</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="item-container-additional_info">
+        <ul>
+          <li class="checked">Принт можно гладить утюгом</li>
+          <li>Принт на рукавах и на грудной стороне</li>
+          <li>Доставка с помощью почты россии</li>
+          <li class="checked">100% хлопок</li>
+        </ul>
+      </div>
+      <div class="purchase-block">
+      <a href="#" class="item-container-purchase_btn">
+        <i class="fa-solid fa-cart-shopping"></i> В КОРЗИНУ
+      </a>
+
+    </div>
+  </div>
+  <div class="search-popup" id="searchPopup">
+    <div class="background-container">
+      <img class="svg-background right" src="/img/svg/bg_search.svg" alt="Background">
+      <div class="close-section">
+        <a id="closeSearch" class="return-link" href="#">
+          ← ВЕРНУТЬСЯ К КАТАЛОГУ
+        </a>
+      </div>
+      <div class="popular-section">
+        <div class="popular-header">
+            РЕКОМЕНДУЕМ
+        </div>
+        <ul class="popular-list">
+          <li><a href="#">NEVERMORE</a></li>
+          <li><a href="#">PLEASEMORE</a></li>
+          <li><a href="#">COLLECTION 1</a></li>
+          <li><a href="#">COLLECTION 2</a></li>
+          <li><a href="#">COLLECTION 3</a></li>
+        </ul>
+      </div>
+      <div class="search-section">
+        <input placeholder="Сюда можно писать!"/>
+        <div class="search-results">
+          <div class="search-results-header">
+            Найдено по вашим запросам
+          </div>
+          <div class="search-result-container">
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+            <a href="#set_link_from_db" class="container search-result">
+              <img class="product-image" src="https://via.placeholder.com/150x150" alt="Product Image">
+              <div class="text-left">LONGSLEEVE</div>
+              <div class="price-container">
+                <div class="price-text">2 890 ₽</div>
+              </div>
+              <div class="availability-text">в наличии</div>
+              <div class="product-title">NEVERMORE</div>
+              <div class="decorator">
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+                <div class="decorator-line"></div>
+              </div>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="pagination">
+    <a href="#">← ВЕРНУТЬСЯ К КАТАЛОГУ</a>
+  </div>
+  <script src="/js/app.js"></script>
+</div>
+</body>
+
+</html>
