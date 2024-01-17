@@ -706,8 +706,7 @@ body {
     position: relative; /* Для позиционирования абсолютных элементов относительно этого контейнера */
     transform: translateX(-50%); /* Центрируем по горизонтали */
     left: 50%; /* Центрируем по горизонтали */
-    overflow: auto;
-    overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
+    overflow: hidden;
   }
   .background-container {
     padding: 1.5rem 3rem 2.7rem 3rem;
@@ -825,8 +824,7 @@ body {
   }
   .item-container{
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     position: initial;
     display: flex;
     flex-wrap: wrap;
@@ -887,7 +885,6 @@ body {
   }
   .product-list {
     padding: 0;
-    width: 100vw; /* Максимальная ширина равна ширине экрана */
     max-width: none; /* Отменяем максимальную ширину */
     margin: 150px 0; /* Отступ сверху и небольшие отступы с обеих сторон */
     height: calc(100vh - 290px);
@@ -895,8 +892,7 @@ body {
     position: relative; /* Для позиционирования абсолютных элементов относительно этого контейнера */
     transform: translateX(-50%); /* Центрируем по горизонтали */
     left: 50%; /* Центрируем по горизонтали */
-    overflow: auto;
-    overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
+    overflow: hidden;
   }
   .background-container {
     padding: 1.5rem 1.5rem 2.7rem 1.5rem;
@@ -917,16 +913,37 @@ body {
     top: 60px;
     transform: translateX(-50%) scale(0.6);
   }
+  .background-container{
+    height: 100%;
+    overflow: auto;
+  }
 }
 
 
 @media screen and (max-width: 480px) {
+  .product-list {
+    padding: 0;
+    width: 100vw; /* Максимальная ширина равна ширине экрана */
+    max-width: none; /* Отменяем максимальную ширину */
+    margin: 150px 0; /* Отступ сверху и небольшие отступы с обеих сторон */
+    height: calc(100vh - 40vh);
+    box-sizing: border-box; /* Учитываем padding в высоте */
+    position: relative; /* Для позиционирования абсолютных элементов относительно этого контейнера */
+    transform: translateX(-50%); /* Центрируем по горизонтали */
+    left: 50%; /* Центрируем по горизонтали */
+    overflow: hidden;
+  }
+  .product-list{
+    overflow: hidden;
+  }
   .item-container-title{
     font-size: 36px;
     transform: translate(26px, 30%);
   }
   .background-container {
     padding: 1.5rem 1.5rem 2.7rem 1.5rem;
+    height: 100%;
+    overflow: auto;
   }
 
   .svg-background {
